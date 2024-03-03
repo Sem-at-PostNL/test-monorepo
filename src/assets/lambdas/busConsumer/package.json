@@ -1,0 +1,25 @@
+{
+  "name": "bus-consumer",
+  "version": "1.0.0",
+  "description": "Lambda that consumes messages from the eMagiz bus",
+  "author": "Martijn Sturm",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^1.18.1",
+    "@aws-sdk/client-sqs": "^3.525.0",
+    "interfaces": "*",
+    "lambda-logging": "*",
+    "sqs-helper": "*",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk-client-mock": "^3.0.1"
+  },
+  "scripts": {
+  },
+  "nx": {
+    "includedScripts": []
+  }
+}

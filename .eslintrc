@@ -1,0 +1,54 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:import/typescript", "airbnb-typescript/base", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": ["off"],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 180,
+        "tabWidth": 2,
+        "trailingComma": "none",
+        "singleQuote": true,
+        "quoteProps": "as-needed"
+      }
+    ],
+    "linebreak-style": ["warn", "unix"],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "max-len": ["error", 180],
+    "quotes": ["off"],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-underscore-dangle": "off",
+    "no-new": "off",
+    "import/first": "off"
+  },
+  "plugins": ["jest", "@typescript-eslint", "import", "prettier"],
+  "settings": {
+    "jest": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {},
+      "typescript": {
+        "project": "./tsconfig.dev.json",
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "ignorePatterns": ["*.js", "*.d.ts", "node_modules/", "*.generated.ts", "coverage", "jest.config.ts", "scripts/*", ".eslintrc.*"]
+}

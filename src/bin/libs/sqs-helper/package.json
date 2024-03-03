@@ -1,0 +1,19 @@
+{
+  "name": "sqs-helper",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^1.18.1",
+    "@aws-sdk/client-sqs": "^3.525.0",
+    "aws-xray-sdk": "^3.5.4",
+    "utilities": "*"
+  },
+  "devDependencies": {
+    "aws-sdk-client-mock": "^3.0.1",
+    "fixtures": "*"
+  },
+  "scripts": {
+    "test": "jest --debug"
+  }
+}
